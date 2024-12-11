@@ -1,0 +1,15 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Building FocusZen",
+  "main": "index.js",
+  
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Productivity"
+  ],
+  "author": "Prathmesh",
+  "license": "ISC"
+}
