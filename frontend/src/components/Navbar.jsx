@@ -21,7 +21,7 @@ function Navbar() {
           {/* <img src="" className="h-12 w-12 rounded-full" alt="Logo" /> */}
           <h1 className="font-semibold text-xl cursor-pointer">
             <Link to="/">
-              Focus<span className="text-2xl text-purple-500 font-bold">Zen_</span>
+              Focus<span className="text-2xl text-purple-500 font-bold">Zen</span>
             </Link>
           </h1>
         </div>

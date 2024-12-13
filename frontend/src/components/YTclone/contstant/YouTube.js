@@ -1,5 +1,6 @@
 
-export const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+// export const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+export const API_KEY = "AIzaSyAq7owgLQA25uGWQMoiPgtYxC0vEnrCz74"
 
 export  const YouTube_Videos = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=IN&key=${API_KEY}`;
 
