@@ -13,6 +13,7 @@ import HomepageYT from "./components/YTclone/HomepageYT";
 import Watch from './components/YTclone/Watch'
 import Profile from "./components/profile/Profile";
 import ChallengePage from "./components/challenges/ChallengePage";
+import CoursesList from "./components/challenges/CoursesList";
 
 const App = () => {
   return (
@@ -29,7 +30,11 @@ const App = () => {
       <Route path="/community" element={<CommunityChat/>} />   
       <Route path="/watch" element={<Watch/>} />   
       <Route path="/profile" element={<Profile/>} />    
-      <Route path="/challenge" element={<ChallengePage/>} />   
+      <Route path="/challenge" element={<CoursesList/>} />   
+      {/* Challenge Page for Specific Course */}
+      <Route path="/course/:language" element={<ChallengePage />} />
+      <Route path="*" element={<div className="text-white">Page not found!</div>} />
+
       </Routes>
     </Router>
 

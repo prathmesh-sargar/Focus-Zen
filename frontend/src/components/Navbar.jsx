@@ -32,7 +32,10 @@ function Navbar() {
             <Link to="/">Home</Link>
           </span>
           <span className="hover:text-purple-500 transition duration-300">
-            <Link to="/ytsearch">Search Engine</Link>
+            <Link to="/challenge">Challenge </Link>
+          </span>
+          <span className="hover:text-purple-500 transition duration-300">
+            <Link to="/ytsearch">Search E</Link>
           </span>
           <span className="hover:text-purple-500 transition duration-300">
             <Link to="/improve">Improve</Link>

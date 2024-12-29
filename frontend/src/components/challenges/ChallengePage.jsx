@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import ProgressBar from "./ProgressBar";
 import VideoSection from "./VideoSection";
 import ModulesSection from "./ModulesSection";
 import Navbar from "../Navbar";
+import coursesData from "./data/coursesData.js"; // Import course data
 
 const ChallengePage = () => {
-  const totalQuestions = 4; // Total static questions for progress calculation
+  const { language } = useParams(); // Get language from URL
+  const course = coursesData[language]; // Fetch course-specific data
+  const totalQuestions = course.questions.length;
+
   const [completedQuestions, setCompletedQuestions] = useState(0);
 
-  // Handler to update progress
   const handleProgressUpdate = (completed) => {
     setCompletedQuestions(completed);
   };
@@ -17,24 +21,20 @@ const ChallengePage = () => {
     <>
       <Navbar />
       <div className="min-h-screen bg-black text-white flex flex-col items-center px-4 py-6">
-        {/* Mobile-first Layout */}
         <div className="flex flex-col md:flex-row w-full gap-4 mt-[80px]">
-          {/* Left Section: Progress Bar and Video Section */}
           <div className="w-full md:w-[50%] md:fixed left-0 p-4 h-full overflow-y-auto">
-            {/* Progress Bar */}
             <div className="mb-6">
               <ProgressBar completed={completedQuestions} total={totalQuestions} />
             </div>
-
-            {/* Video Section */}
             <div className="mb-6 md:mb-0">
-              <VideoSection videoUrl="https://www.youtube.com/embed/2eebptXfEvw" />
+              <VideoSection videoUrl={course.videoUrl} courseName={course.courseName}  />
             </div>
           </div>
-
-          {/* Right Section: Modules */}
           <div className="w-full md:w-[47%] md:ml-[50%] p-4">
-            <ModulesSection onProgressUpdate={handleProgressUpdate} />
+            <ModulesSection
+              questions={course.questions}
+              onProgressUpdate={handleProgressUpdate}
+            />
           </div>
         </div>
       </div>

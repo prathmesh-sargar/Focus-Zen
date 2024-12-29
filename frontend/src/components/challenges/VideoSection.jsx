@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoSection = ({ videoUrl }) => {
+const VideoSection = ({ videoUrl, courseName }) => {
   return (
   <>
     <div className="w-full max-w-3xl mb-6">
@@ -14,7 +14,7 @@ const VideoSection = ({ videoUrl }) => {
 ></iframe>
      
     </div>
-    <h1 className="font-bold text-2xl p-2">PHP Tutorial</h1>
+    <h1 className="font-bold text-2xl p-2">{courseName}</h1>
   </>
   );
 };
