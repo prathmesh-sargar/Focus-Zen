@@ -79,11 +79,18 @@ function Navbar() {
             Home
           </Link>
           <Link
+            to="/challenge"
+            onClick={toggleMenu}
+            className="hover:text-purple-500 transition duration-300"
+          >
+            Challenge
+          </Link>
+          <Link
             to="/ytsearch"
             onClick={toggleMenu}
             className="hover:text-purple-500 transition duration-300"
           >
-            Search Engine
+            Search E
           </Link>
           <Link
             to="/improve"
