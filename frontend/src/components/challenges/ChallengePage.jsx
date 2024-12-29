@@ -5,7 +5,7 @@ import ModulesSection from "./ModulesSection";
 import Navbar from "../Navbar";
 
 const ChallengePage = () => {
-  const totalQuestions = 3; // Total static questions for progress calculation
+  const totalQuestions = 4; // Total static questions for progress calculation
   const [completedQuestions, setCompletedQuestions] = useState(0);
 
   // Handler to update progress
@@ -18,7 +18,7 @@ const ChallengePage = () => {
       <Navbar />
       <div className="min-h-screen bg-black text-white flex flex-col items-center px-4 py-6">
         {/* Mobile-first Layout */}
-        <div className="flex flex-col md:flex-row w-full gap-4 mt-[100px]">
+        <div className="flex flex-col md:flex-row w-full gap-4 mt-[80px]">
           {/* Left Section: Progress Bar and Video Section */}
           <div className="w-full md:w-[50%] md:fixed left-0 p-4 h-full overflow-y-auto">
             {/* Progress Bar */}

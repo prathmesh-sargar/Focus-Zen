@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const ModulesSection = ({ onProgressUpdate }) => { 
+  
   const modules = [
     { id: 1, question: "What is a variable in Java?" },
     { id: 2, question: "Explain the concept of OOPs." },
@@ -53,7 +54,7 @@ const ModulesSection = ({ onProgressUpdate }) => {
 
             {/* Answer Textarea */}
             <textarea
-              rows="4"
+              rows="3"
               placeholder="Write your answer here (minimum 100 characters)"
               className="mt-4 w-full p-3 text-white rounded-lg shadow-md resize-none focus:outline-none focus:ring-2 focus:ring-purple-500"
               onChange={(e) => handleInputChange(module.id, e.target.value)}
