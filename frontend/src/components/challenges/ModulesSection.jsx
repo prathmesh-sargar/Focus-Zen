@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ModulesSection = ({ onProgressUpdate }) => {
+const ModulesSection = ({ onProgressUpdate }) => { 
   const modules = [
     { id: 1, question: "What is a variable in Java?" },
     { id: 2, question: "Explain the concept of OOPs." },
